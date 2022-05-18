@@ -19,6 +19,11 @@ h1 {
     font-family: 'Radio Canada', sans-serif;
 }
 
+h2 {
+    padding: 10px;
+    text-align: center;
+}
+
 .header__titulo {
     padding: 25px;
     text-align: center;
@@ -366,7 +371,7 @@ button {
 
 
 
- button:hover {
+button:hover {
     
     margin-top: 12px;
     padding: 2px;
@@ -374,4 +379,25 @@ button {
     background-color: #d47c17;
     color: black;
     
+}
+
+.p_indexcards {
+
+    color: #082032;
+    font-weight: 600;
+}
+
+.index__card {
+
+    background-color: #064663;
+}
+
+.index__cardimg {
+    padding-top: 10px;
+    height: 250px;
+   /*  border-radius: 10px; */
+} 
+
+.index__carruselimg {
+    height: 280px;
 }
