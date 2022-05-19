@@ -363,7 +363,7 @@ button {
     margin-top: 12px;
     padding: 2px;
     border-radius: 8px;
-    background-color: #d47c17;
+    /* background-color: #d47c17; */
     color: white;
     
 }
@@ -376,7 +376,7 @@ button:hover {
     margin-top: 12px;
     padding: 2px;
     border-radius: 8px;
-    background-color: #d47c17;
+    /* background-color: #d47c17; */
     color: black;
     
 }
@@ -394,7 +394,7 @@ button:hover {
 
 .index__cardimg {
     padding-top: 10px;
-    height: 250px;
+    height: 290px;
    /*  border-radius: 10px; */
 } 
 
