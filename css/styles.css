@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: pink;
+    background-color: #082032;
 }
 
 header{
@@ -44,6 +44,7 @@ a:hover {
     text-align: center;
     background-color: #334756;
     padding: 20px;
+    font-weight: 600
 }
 
 main {
@@ -54,7 +55,7 @@ main {
 
 .introduccion {
 
-    padding: 40px;
+    padding: 20px;
     text-align: center;
 
 }
@@ -68,19 +69,6 @@ main {
 .video__titulo {
     
     margin-bottom: 16px;
-    
-}
-
-.index_productos {
-/* display: inline;  no funcionó como queria, voy a aplicar el flex pero con flex, el titulo "PRODUCTOS", queda en linea*/
-display: flex;   /* Habilitar esto para volver a lo normal, probar grid */ 
-
-/* display: grid; */
-
-/* como se declaran filas */
-
-/* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
-/* grid-template-columns: 1fr 1fr 1fr 1fr ; */
     
 }
 
@@ -133,28 +121,8 @@ display: flex;   /* Habilitar esto para volver a lo normal, probar grid */
 .producto8 {
     grid-area: producto9;
 }
-/* .prod__footer {
-    grid-area: prod__footer;
-    margin-top: 0px;
-    padding: 0px;
-    background-color: #334756;
-    text-align: center;
-}
-
-.prod__header {
-    grid-area: prod__header;
-}  */
 
 .productos__destacados {
-    /*  background-color: #ca9e0e;
-    text-align: center;
-    padding: 20px;
-    width: 215px;
-    height: 300px;
-    margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 50%; */
 
     display: flex;
     flex-direction: column;
@@ -164,17 +132,7 @@ display: flex;   /* Habilitar esto para volver a lo normal, probar grid */
 
 }
 .productos__normal {
-    /* display: flex; */ /* ROMPE LA PAGINA */
-    /* background-color: #2C394B;
-    text-align: center;
-    padding: 20px;
-    width: 215px;
-    height: 300px; 
-    margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 0px; 
-    */
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -305,8 +263,6 @@ li {
     display: inline;
     text-align: center;
     padding: 30px;
-    /* margin-top: 130px;
-    margin-bottom: 30px; */
 
 }
 
@@ -388,16 +344,34 @@ button:hover {
 }
 
 .index__card {
-
     background-color: #064663;
 }
 
-.index__cardimg {
+.index__card--destacado {
+    background-color: #947a09;
+}
+
+/* .index__cardimg {
     padding-top: 10px;
     height: 290px;
-   /*  border-radius: 10px; */
-} 
+}  */
 
 .index__carruselimg {
     height: 280px;
+}
+
+@media (max-width: 540px)
+{
+
+    .header__nav {
+        font-size: large;
+    } 
+
+    .index__carruselimg {
+        height: 180px;
+    }
+
+
+
+
 }
