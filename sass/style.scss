@@ -11,10 +11,23 @@ body {
     background-color: $color-principal;
 }
 
-header{
+.header{
     
     background-color: $color-principal;
     color: white;
+
+    &__titulo {
+        padding: 25px;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    &__nav {
+        text-align: center;
+        background-color: #334756;
+        padding: 20px;
+        font-weight: 600
+    }
     
 }
 
@@ -28,12 +41,6 @@ h2 {
     text-align: center;
 }
 
-.header__titulo {
-    padding: 25px;
-    text-align: center;
-    font-size: 40px;
-}
-
 a {
     text-decoration: none;
     color: white;
@@ -44,12 +51,7 @@ a:hover {
     color: black;
 }
 
-.header__nav {
-    text-align: center;
-    background-color: #334756;
-    padding: 20px;
-    font-weight: 600
-}
+
 
 main {
     
@@ -62,18 +64,6 @@ main {
     padding: 20px;
     text-align: center;
 
-}
-
-.video {
-    padding: 10px;
-    text-align: center;
-    font-size: 30px;
-}
-
-.video__titulo {
-    
-    margin-bottom: 16px;
-    
 }
 
 .productos__titulo{
