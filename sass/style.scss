@@ -150,7 +150,7 @@ $postres:(postre1: 1,postre2: 2,postre3: 3,postre4: 4,postre5: 5,postre6: 6,post
 @each $postre, $nombrepostre in $postres {
     .#{$postre}-foto {
         width: 30rem;
-        height: 30rem;
+        height: 25rem;
         background-image: url('../resources/#{$nombrepostre}.jpg');
         background-size: cover;
     
