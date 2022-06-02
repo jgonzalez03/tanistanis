@@ -23,7 +23,7 @@ body {
 
     &__nav {
         text-align: center;
-        background-color: #334756;
+        background-color: $color-navyfoot;
         padding: 20px;
         font-weight: 600
     }
@@ -32,7 +32,7 @@ body {
 
 h1 {
 
-    font-family: 'Radio Canada', sans-serif;
+    font-family: $fuente-titulo;
 }
 
 h2 {
@@ -83,7 +83,7 @@ main {
     
     margin-top: 0px;
     padding: 40px;
-    background-color: #334756;
+    background-color: $color-navyfoot;
     text-align: center;
     &__img {
         display: inline;
@@ -145,227 +145,22 @@ li {
 
 }
 
+$postres:(postre1: 1,postre2: 2,postre3: 3,postre4: 4,postre5: 5,postre6: 6,postre7: 7,postre8: 8,postre9: 9,postre10: 10,postre11: 11,postre12: 12,postre13: 13,postre14: 14);
+
+@each $postre, $nombrepostre in $postres {
+    .#{$postre}-foto {
+        width: 30rem;
+        height: 30rem;
+        background-image: url('../resources/#{$nombrepostre}.jpg');
+        background-size: cover;
+    
+    }
+}
+
+.gridmosaico {
+
+    display: flex;
+}
 /* siempre correr npm run watch-css antes de iniciar cambios */
 
 
-/* .destacado 
-{       
-/* es una clase, para procutos especiales por ejemplo 
-color: red;
-text-size-adjust: 900;
-
-} */
-
-/* .prod__button {
-    margin-top: 12px;
-    padding: 2px;
-    border-radius: 8px;
-    size-adjust: 100%;
-    background-color: #d41a17;
-    color: white;
-    
-}
-
-.prod__button:hover {
-    margin-top: 12px;
-    padding: 2px;
-    border-radius: 8px;
-    background-color: #d47c17;
-    color: black;
-    
-}
-
-.gridespecialidades{
-
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: 
-    "esp_producto1"
-    "esp_roducto2"
-    ;
-    gap: 25px;
-    
-
-}
-
-.esp__producto1 {
-    grid-area: esp_producto1;
-}
-
-.esp__producto2 {
-    grid-area: esp_producto2;
-}
-
-.esp__descripcion1 {
-    grid-area: esp_descripcion1;
-}
-
-.esp__descripcion2 {
-    grid-area: esp_descripcion2;
-    
-}
-
-button {
-    margin-top: 12px;
-    padding: 2px;
-    border-radius: 8px;
-    /* background-color: #d47c17; 
-    color: white;
-    
-}
-
-
-
-
-button:hover {
-    
-    margin-top: 12px;
-    padding: 2px;
-    border-radius: 8px;
-    /* background-color: #d47c17; 
-    color: black;
-    
-} */
-
-
-/* .index_productos__imagen {
-
-    width:200px;
-    height: 250px;
-    border-radius: 10px;
-    
-}
-
-.productos__imagen--especial {
-
-    width: 100%;
-    height: 100%;
-    
-}
-
-.productos__descripcion {
-
-    margin-top: 10px;
-} */
-
-/* .gridproductos {
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "producto1 producto2 producto3"
-    "producto4 producto5 producto6"
-    "producto7 producto8 producto9"
-        ;
-    gap: 50px;
-    
-
-}
-
-.producto1 {
-    grid-area: producto1;
-}
-.producto2 {
-    grid-area: producto2;
-}
-.producto3 {
-    grid-area: producto3;
-}
-.producto4 {
-    grid-area: producto4;
-}
-.producto5 {
-    grid-area: producto5;
-}
-.producto6 {
-    grid-area: producto6;
-}
-.producto7 {
-    grid-area: producto7;
-}
-.producto8 {
-    grid-area: producto8;
-}
-.producto8 {
-    grid-area: producto9;
-}
-
-.productos__destacados {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-        
-
-}
-.productos__normal {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-
-}
-
-.productos__imagen {
-
-    width:75%;
-    height: 90%;
-    border-radius: 10px;
-    align-items: center;
-    
-}
-
-.productos__imagen:hover {
-    border-radius:50%;
-    -webkit-border-radius:50%;
-    box-shadow: 0px 0px 15px 15px white;
-    -webkit-box-shadow: 0px 0px 15px 15px rgba(255, 255, 255, 0.388);
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-}
-
-
-.index_productos__normal {
-    /* display: flex; */ /* ROMPE LA PAGINA 
-    background-color: #2C394B;
-    text-align: center;
-    padding: 20px;
-    width: 215px;
-    height: 300px;
-    margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 0px; 
-
-    
-
-}
-
-
-
-.productos__especiales {
-    /* display: flex; */ /* ROMPE LA PAGINA
-    background-color: #2C394B;
-    text-align: center;
-    padding: 20px;
-    width: 415px;
-    height: 600px;
-    /*  margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px; 
-    border-radius: 15px;
-    margin-bottom: 10px;
-    
-
-}
- */
-
- /* .productos__titulo{
-
-    padding: 10px;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-} */
