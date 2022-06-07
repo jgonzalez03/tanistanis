@@ -42,6 +42,12 @@ main {
   padding: 20px;
   text-align: center; }
 
+.esp__imagen {
+  height: 500px;
+  width: 500px;
+  border-radius: 100%;
+  margin: 20px; }
+
 .acercade {
   display: flex; }
   .acercade__imagen {
