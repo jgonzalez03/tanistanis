@@ -24,7 +24,7 @@ body {
     &__nav {
         text-align: center;
         background-color: $color-navyfoot;
-        padding: 20px;
+        padding: 25px;
         font-weight: 600
     }
     
@@ -129,20 +129,46 @@ li {
 
 }
 
-@media (max-width: 540px)
+@media screen and (min-width: 577px)
 {
 
+    .texto__corto {
+        display: none;
+        justify-content: center;
+    } 
+    .texto__largo {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+@media screen and (max-width: 576px)
+{
+
+    .texto__largo {
+        display: none;
+        justify-content: center;
+    }
+
+    li {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .texto__corto {
+        display: flex;
+        justify-content: center;
+    }
     .header__nav {
-        font-size: large;
+        font-size: x-large;
+    
     } 
 
     .index__carruselimg {
         height: 180px;
     }
-
-
-
-
 }
 
 $postres:(postre1: 1,postre2: 2,postre3: 3,postre4: 4,postre5: 5,postre6: 6,postre7: 7,postre8: 8,postre9: 9,postre10: 10,postre11: 11,postre12: 12,postre13: 13,postre14: 14);

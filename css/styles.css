@@ -16,7 +16,7 @@ body {
   .header__nav {
     text-align: center;
     background-color: #334756;
-    padding: 20px;
+    padding: 25px;
     font-weight: 600; }
 
 h1 {
@@ -81,9 +81,26 @@ li {
 .index__carruselimg {
   height: 280px; }
 
-@media (max-width: 540px) {
+@media screen and (min-width: 577px) {
+  .texto__corto {
+    display: none;
+    justify-content: center; }
+  .texto__largo {
+    display: flex;
+    justify-content: center; } }
+
+@media screen and (max-width: 576px) {
+  .texto__largo {
+    display: none;
+    justify-content: center; }
+  li {
+    padding: 20px;
+    margin: 20px; }
+  .texto__corto {
+    display: flex;
+    justify-content: center; }
   .header__nav {
-    font-size: large; }
+    font-size: x-large; }
   .index__carruselimg {
     height: 180px; } }
 
