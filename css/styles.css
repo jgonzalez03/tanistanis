@@ -4,7 +4,8 @@
   padding: 0px; }
 
 body {
-  background-color: #082032; }
+  background-color: #082032;
+  font-family: "Poppins", sans-serif; }
 
 .header {
   background-color: #082032;
@@ -20,7 +21,8 @@ body {
     font-weight: 600; }
 
 h1 {
-  font-family: "Radio Canada", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; }
 
 h2 {
   padding: 10px;
@@ -48,12 +50,18 @@ main {
   border-radius: 100%;
   margin: 20px; }
 
-.acercade {
-  display: flex; }
-  .acercade__imagen {
-    width: 450px;
-    height: 300px;
-    margin-right: 15px; }
+.acercade__card {
+  background-color: #082032;
+  margin: 17px; }
+
+.acercade__img {
+  width: 535px;
+  height: 700px;
+  border-radius: 10%; }
+
+.acercade__title {
+  font-size: xx-large;
+  font-weight: bold; }
 
 .footer {
   margin-top: 0px;
@@ -75,24 +83,40 @@ li {
   padding: 30px; }
 
 .index__card {
-  background-color: #064663; }
+  background-color: #064663;
+  transition: 0.5s all ease-in-out; }
+
+.index__card:hover {
+  transform: scale(1.1);
+  border-color: white; }
 
 .index__pcards {
   color: #082032;
   font-weight: 600; }
 
 .index__card--destacado {
-  background-color: #947a09; }
+  background-color: #947a09;
+  transition: 0.5s all ease-in-out; }
+
+.index__card--destacado:hover {
+  transform: scale(1.1);
+  border-color: white; }
 
 .index__carruselimg {
   height: 280px; }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 769px) {
   .texto__corto {
     display: none;
     justify-content: center; }
   .texto__largo {
     display: flex;
+    justify-content: center; } }
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .acercade__img {
+    width: 460px;
+    height: 600px;
     justify-content: center; } }
 
 @media screen and (max-width: 576px) {
@@ -108,93 +132,172 @@ li {
   .header__nav {
     font-size: x-large; }
   .index__carruselimg {
-    height: 180px; } }
+    height: 180px; }
+  .acercade__img {
+    width: 300px;
+    height: 400px; } }
 
 .postre1-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/1.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre2-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/2.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre3-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/3.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre4-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/4.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre5-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/5.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre6-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/6.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre7-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/7.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre8-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/8.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre9-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/9.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre10-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/10.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre11-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/11.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre12-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/12.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre13-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/13.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
 
 .postre14-foto {
   width: 30rem;
-  height: 25rem;
+  height: 12rem;
   background-image: url("../resources/14.jpg");
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.5s all ease-in-out; }
+
+.postre1-foto:hover {
+  transform: scale(1.7); }
+
+.postre2-foto:hover {
+  transform: scale(1.7); }
+
+.postre3-foto:hover {
+  transform: scale(1.7); }
+
+.postre4-foto:hover {
+  transform: scale(1.7); }
+
+.postre5-foto:hover {
+  transform: scale(1.7); }
+
+.postre6-foto:hover {
+  transform: scale(1.7); }
+
+.postre7-foto:hover {
+  transform: scale(1.7); }
+
+.postre8-foto:hover {
+  transform: scale(1.7); }
+
+.postre9-foto:hover {
+  transform: scale(1.7); }
+
+.postre10-foto:hover {
+  transform: scale(1.7); }
+
+.postre11-foto:hover {
+  transform: scale(1.7); }
+
+.postre12-foto:hover {
+  transform: scale(1.7); }
+
+.postre13-foto:hover {
+  transform: scale(1.7); }
+
+.postre14-foto:hover {
+  transform: scale(1.7); }
 
 .gridmosaico {
   display: flex; }
+
+.especialidades__img {
+  height: 300px;
+  width: 550px; }
+
+.especialidades__card {
+  background-color: #0b3452;
+  margin: 17px; }
+
+.especialidades__card:hover {
+  border-color: white;
+  border-width: 2px; }
+
+.especialidades__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: x-large; }
+
+.especialidades__text {
+  font-family: "Poppins", sans-serif; }
 
 /* siempre correr npm run watch-css antes de iniciar cambios */
