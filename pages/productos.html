@@ -19,34 +19,35 @@
     
 
     <header>
-
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
+        
     
         <h1 class="header__titulo texto__largo"><a href="../index.html">Tanis Tanis - Productos</a></h1>
         <h1 class="header__titulo texto__corto"><a href="../index.html">Tanis Tanis</a></h1>
 
         <nav class="header__nav">
         
-            <ul>
+            <ul class="texto__largo">
                 <li><a href="../index.html">INICIO</a></li>
                 <li><a href="../pages/productos.html">PRODUCTOS</a></li>
                 <li><a href="../pages/especialidades.html">ESPECIALIDADES</a></li>
                 <li><a href="../pages/acerca_de_nosotros.html">ACERCA DE NOSOTROS</a></li>
                 <li><a href="../pages/contacto.html">CONTACTO</a></li>
             </ul>
+
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+            
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="../index.html">INICIO</a></li>
+                    <li><a class="menu__item" href="../pages/productos.html">PRODUCTOS</a></li>
+                    <li><a class="menu__item" href="../pages/especialidades.html">ESPECIALIDADES</a></li>
+                    <li><a class="menu__item" href="../pages/acerca_de_nosotros.html">ACERCA DE NOSOTROS</a></li>
+                    <li><a class="menu__item" href="../pages/contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
 
 
         </nav>
