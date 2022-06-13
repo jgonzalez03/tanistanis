@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* agregar colores y letras para entrega */
 * {
   margin: 0px;
@@ -11,22 +12,14 @@ body {
   background-color: #082032;
   color: white; }
   .header__titulo {
-    padding: 25px;
+    padding: 8px;
     text-align: center;
     font-size: 40px; }
   .header__nav {
     text-align: center;
     background-color: #334756;
-    padding: 25px;
+    padding: 4px;
     font-weight: 600; }
-
-h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600; }
-
-h2 {
-  padding: 10px;
-  text-align: center; }
 
 a {
   text-decoration: none;
@@ -35,6 +28,14 @@ a {
 a:hover {
   text-decoration: none;
   color: black; }
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; }
+
+h2 {
+  padding: 10px;
+  text-align: center; }
 
 main {
   background-color: #082032;
@@ -111,9 +112,14 @@ li {
     justify-content: center; }
   .texto__largo {
     display: flex;
-    justify-content: center; } }
+    justify-content: center; }
+  .hamburger-menu {
+    display: none; } }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
+  .texto__largo {
+    display: none;
+    justify-content: center; }
   .acercade__img {
     width: 460px;
     height: 600px;
@@ -301,3 +307,74 @@ li {
   font-family: "Poppins", sans-serif; }
 
 /* siempre correr npm run watch-css antes de iniciar cambios */
+/* Probando Menu Burger, para media pequeña */
+#menu__toggle {
+  opacity: 0; }
+
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg); }
+
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg); }
+
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg); }
+
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important; }
+
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1; }
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition-duration: .25s; }
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px; }
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px; }
+
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #0b3452;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: .25s; }
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s; }
+
+.menu__item:hover {
+  background-color: #CFD8DC; }
