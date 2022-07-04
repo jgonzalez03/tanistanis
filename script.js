@@ -99,4 +99,3 @@ if (numero1 === 10 || numero2 === 25) {
     console.log("no se cumple la condicion")
 }
 
-
