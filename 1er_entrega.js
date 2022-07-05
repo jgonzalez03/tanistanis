@@ -142,17 +142,3 @@ switch(seleccion4) {
 
 console.log("El Stock fue actualizado, STOCK ACTUAL:")
 console.table(todosProductos)
-
-
-
-
-
-
-/* console.log(animales.find(animal => animal.nombre === "Box Bunny")) // buscar por un tipo de, exacto. Devuelve solo un objeto que cumpla con la condicion.
-console.log(animales.filter(animal => animal.peso > 60)) //devuelve todos mayores LAS VARIABLES SON LOCALES; SE PUEDE PONER CUALQUIER NOMBRE
-
-console.log(animales.some(esto => esto.nombre === "Firulais")) // devuelve un true or false
-
-const pesototal = animales.map(animales => animales = animales.peso) // es para sacar solo uno de los datos, y crear un nuevo array  (ejemplo sumar sueldos o pesos o lo que sea)
-console.log(pesototal)
- */*/
