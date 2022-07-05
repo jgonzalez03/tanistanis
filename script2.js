@@ -276,5 +276,31 @@ console.log(animales.filter(animal => animal.peso > 60)) //devuelve todos mayore
 
 console.log(animales.some(esto => esto.nombre === "Firulais")) // devuelve un true or false
 
+const pesototal = animales.map(animales => animales = animales.peso) // es para sacar solo uno de los datos, y crear un nuevo array  (ejemplo sumar sueldos o pesos o lo que sea)
+console.log(pesototal)
+
+let sum = 0;
+
+for (let i = 0; i < pesototal.length; i++) { // Sumar contenido del array
+    sum += pesototal[i];
+}
+console.log("la suma total de los pesos de los animales es:"+sum);
+
+function generarNombreEspecie (animal) {
+    return "Nombre del animal es:"+ animal.nombre+" y la especie es: "+animal.especie
+}
+
+// OTRA MANERA DE SUMAR MAS EFICIENTE
+
+const pesoanimal = animales.map(animal => animal = animal.peso)
+console.log(pesoanimal)
+console.log(pesoanimal.reduce((acum, next) => acum + next, 0)) // sumar loq ue hay en el array, o en el dato que queremos
+console.log(pesoanimal.sort((num1, num2) => num1 - num2)) // ordena de menor a mayor el array
+
+
+const animalNombreespecie = animales.map(animales => animales = generarNombreEspecie(animales))
+console.log(animalNombreespecie)
+
+
 
 
