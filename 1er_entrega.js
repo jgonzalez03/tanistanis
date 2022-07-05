@@ -39,18 +39,22 @@ let seleccion3 = 0
 let seleccion4 = 0
 
 seleccion1 = prompt("Ingrese el nombre de un producto deseado (posibles:"+nombreProductos+")").toLocaleLowerCase()
+BajarStock(seleccion1)
 console.log("Seleccionó: "+seleccion1)
 let continuar = prompt("Desea seleccionar otro? Ingrese SI o NO").toLocaleLowerCase()
 if (continuar === "si") {
     seleccion2 = prompt("Ingrese el nombre de un producto deseado (posibles:"+nombreProductos+")").toLocaleLowerCase()
+    BajarStock(seleccion2)
     console.log("Seleccionó: "+seleccion1+" y "+seleccion2)
     continuar = prompt("Desea seleccionar otro? Ingrese SI o NO").toLocaleLowerCase()
     if (continuar === "si") {
         seleccion3 = prompt("Ingrese el nombre de un producto deseado (posibles:"+nombreProductos+")").toLocaleLowerCase()
+        BajarStock(seleccion3)
         console.log("Seleccionó: "+seleccion1+" y "+seleccion2+" y "+seleccion3)
         continuar = prompt("Desea seleccionar otro? Ingrese SI o NO").toLocaleLowerCase()
         if (continuar ==="si") {
             seleccion4 = prompt("Ingrese el nombre de un producto deseado (posibles:"+nombreProductos+")").toLocaleLowerCase()
+            BajarStock(seleccion4)
             console.log("Seleccionó: "+seleccion1+" y "+seleccion2+" y "+seleccion3+" y "+seleccion4)
         } else {
             
@@ -75,69 +79,23 @@ function IVA2(precio1) {
 
 console.log("El precio total de su carrito CON IVA, y redondeado es de: $"+IVA2(precioTotal))
 
-switch(seleccion1) {
-    case "brownie":
-        producto1.disminuirStock(1)
-        break
-    case "cookies":
-        producto2.disminuirStock(1)
-        break
-    case "empanadas":
-        producto3.disminuirStock(1)
-        break
-    case "cheese cake":
-        producto4.disminuirStock(1)
-        break
-    default: 
-        console.log("Se selecciono un producto errado, no se descuenta stock")
-}
-switch(seleccion2) {
-    case "brownie":
-        producto1.disminuirStock(1)
-        break
-    case "cookies":
-        producto2.disminuirStock(1)
-        break
-    case "empanadas":
-        producto3.disminuirStock(1)
-        break
-    case "cheese cake":
-        producto4.disminuirStock(1)
-        break
-    default: 
-        console.log("Se selecciono un producto errado, no se descuenta stock")
-}
-switch(seleccion3) {
-    case "brownie":
-        producto1.disminuirStock(1)
-        break
-    case "cookies":
-        producto2.disminuirStock(1)
-        break
-    case "empanadas":
-        producto3.disminuirStock(1)
-        break
-    case "cheese cake":
-        producto4.disminuirStock(1)
-        break
-    default: 
-        console.log("Se selecciono un producto errado, no se descuenta stock")
-}
-switch(seleccion4) {
-    case "brownie":
-        producto1.disminuirStock(1)
-        break
-    case "cookies":
-        producto2.disminuirStock(1)
-        break
-    case "empanadas":
-        producto3.disminuirStock(1)
-        break
-    case "cheese cake":
-        producto4.disminuirStock(1)
-        break
-    default: 
-        console.log("Se selecciono un producto errado, no se descuenta stock")
+function BajarStock (seleccion){
+    switch(seleccion) {
+        case "brownie":
+            producto1.disminuirStock(1)
+            break
+        case "cookies":
+            producto2.disminuirStock(1)
+            break
+        case "empanadas":
+            producto3.disminuirStock(1)
+            break
+        case "cheese cake":
+            producto4.disminuirStock(1)
+            break
+        default: 
+            console.log("Se selecciono un producto errado, no se descuenta stock")
+    }
 }
 
 console.log("El Stock fue actualizado, STOCK ACTUAL:")
