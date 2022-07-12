@@ -103,6 +103,7 @@ console.table(todosProductos)
 
 
 console.log("A continuación mostraremos el nombre de los productos:")
+
 for (let i = 0; i < todosProductos.length; i++) { 
     console.log(todosProductos[i].nombre)
 }
