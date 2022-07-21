@@ -64,8 +64,13 @@ main {
   font-size: xx-large;
   font-weight: bold; }
 
+.btnmostrar {
+  margin-bottom: 30px;
+  display: flex;
+}
+
 .footer {
-  margin-top: 0px;
+  margin-top: 10px;
   padding: 40px;
   background-color: #334756;
   text-align: center; }
@@ -85,6 +90,7 @@ li {
 
 .index__card {
   background-color: #064663;
+  margin: 15px;
   transition: 0.5s all ease-in-out; }
 
 .index__card:hover {
