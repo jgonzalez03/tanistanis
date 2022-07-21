@@ -38,10 +38,14 @@ botonMostrar.addEventListener("click", () => {
         divProductos.innerHTML += `
             
             <div class="card border-info mb-3" id="producto${indice}" style="max-width: 20rem;margin:4px;">
-                <div class="card-header">${producto.nombre}</div>
+                <div class="card-header">Información de producto</div>
                 <div class="card-body">
-                    <h4 class="card-title">Secondary card title</h4>
+                    <h4 class="card-title">${producto.nombre}</h4>
                     <p class="card-text">${producto.descripcion}</p>
+                    <p class="card-text">Tipo de producto: ${producto.tipo}</p>
+                    <p class="card-text">Cantidad de stock: ${producto.stock}</p>
+                    <p class="card-text">Estado: ${producto.estado}</p>
+                    <p class="card-text" style="color: grey;">Precio: $${producto.precio}</p>
                 </div>
                 <button class="btn btn-danger">Eliminar producto</button>
             </div>
