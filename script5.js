@@ -37,7 +37,7 @@ botonMostrar.addEventListener("click", () => {
     productosStorage.forEach((producto, indice) => {
         divProductos.innerHTML += `
             
-            <div class="card border-info mb-3" id="producto${indice}" style="max-width: 20rem;margin:4px;">
+            <div class="card border-info" id="producto${indice}" style="max-width: 20rem;margin:4px;">
                 <div class="card-header">Información de producto</div>
                 <div class="card-body">
                     <h4 class="card-title">${producto.nombre}</h4>
@@ -57,7 +57,7 @@ botonMostrar.addEventListener("click", () => {
     
     productosStorage.forEach((producto, indice) => {
         document.getElementById(`producto${indice}`).lastElementChild.addEventListener("click", () => {
-            alert(`di click en ${producto.nombre}`)
+            alert(`Se eliminó el producto: ${producto.nombre}`)
             document.getElementById(`producto${indice}`).remove() // Eliminar del DOM
             productos.splice(indice, 1) // eliminar del array
             localStorage.setItem("productosStorage", JSON.stringify(productos))

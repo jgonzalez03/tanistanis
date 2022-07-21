@@ -66,6 +66,8 @@
   }
 }
 
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -4846,11 +4848,20 @@ fieldset:disabled .btn {
 .navbar-dark .navbar-text a:focus {
   color: #fff;
 }
+.card23 {
+  display: flex;
+}
+
+.btnmostrar {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+}
 
 .card {
   position: relative;
-  display: -ms-flexbox;
-  display: flex;
+  /* display: -ms-flexbox; */
+  /* display: flex; */
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;

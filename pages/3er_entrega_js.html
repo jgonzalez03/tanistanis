@@ -34,8 +34,12 @@
                     <input type="number" class="form-control" id="idPrecio" name="precio">
                 </div>
                 <div class="mb-3">
-                    <label for="idEstado" class="form-label">Estado del producto</label>
-                    <input type="texto" class="form-control" id="idEstado" name="estado">
+                    <select name="estado" class="form-select" aria-label="Disabled select example" enabled>
+                        <option selected>Open this select menu</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+
                 </div>
                 <div class="mb-3">
                     <label for="idStock" class="form-label">Stock del producto</label>
@@ -46,14 +50,14 @@
             </form>
         </div>
         <div class="container">
-            <button id="botonMostrar" class="btn btn-success">Mostrar productos cargados</button>
+            <button id="botonMostrar" class="btn btn-success btnmostrar">Mostrar productos cargados</button>
         </div>
                 
         <div>
             <h2 class="container">A continuación se muestran los productos existentes en la "base de datos"</h2>
         </div>
 
-        <div id="divProductos"></div>
+        <div class="row" id="divProductos"></div>
 
         
 
