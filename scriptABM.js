@@ -1,3 +1,4 @@
+
 class Producto {
     constructor(nombre, descripcion, tipo, precio, estado, stock){ 
         this.nombre = nombre
@@ -28,6 +29,14 @@ form.addEventListener("submit", (e) => {
     const producto = new Producto(datForm.get("nombre"),datForm.get("descripcion"),datForm.get("tipo"),datForm.get("precio"),datForm.get("estado"),datForm.get("stock"))
     productos.push(producto)
     localStorage.setItem("productosStorage", JSON.stringify(productos))
+    
+    Swal.fire({
+        icon: 'success',
+        title:`Se agregó el producto con éxito: ${producto.nombre}`,
+        showConfirmButton: false,
+        timer: 3500,
+    })
+    
     form.reset()
 })
 
@@ -59,11 +68,17 @@ botonMostrar.addEventListener("click", () => {
     
     productosStorage.forEach((producto, indice) => {
         document.getElementById(`producto${indice}`).lastElementChild.addEventListener("click", () => {
-            alert(`Se eliminó el producto: ${producto.nombre}`)
+            /* alert(`Se eliminó el producto: ${producto.nombre}`) */
             document.getElementById(`producto${indice}`).remove() // Eliminar del DOM
             productos.splice(indice, 1) // eliminar del array
             localStorage.setItem("productosStorage", JSON.stringify(productos))
-            console.log(productos)
+            
+            Swal.fire({
+                icon: 'warning',
+                title: `Se eliminó del storage el producto: ${producto.nombre}`,
+                showConfirmButton: false,
+                timer: 1500,
+            })
         })
 
     })
