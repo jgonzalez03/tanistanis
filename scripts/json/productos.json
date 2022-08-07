@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "img_producto": "pavlova.jpg",
+        "nombre_producto":"Pavlova con frutos rojos",
+        "descripcion_producto":"Pavlova clásica y tradicional consta de una base de merengue, rellena de nata montada azucarada y rematada con frutos rojos."
+    },
+    {
+        "id": 2,
+        "img_producto": "brownies.jpg",
+        "nombre_producto":"Brownies",
+        "descripcion_producto":"Brownie receta casera, no es necesaria la descripción. Probalo."
+    },
+    {
+        "id": 3,
+        "img_producto": "cookies.jpg",
+        "nombre_producto":"Cookies",
+        "descripcion_producto":"Las mejores cookies al estilo americano, super crujientes y llenas de chips"
+    },
+    {
+        "id": 4,
+        "img_producto": "pandecampo.jpg",
+        "nombre_producto":"Pan de campo",
+        "descripcion_producto":"Pan de masa madre recién horneado, con harina directamente desde Francia, directo a tu paladar."
+    },
+    {
+        "id": 5,
+        "img_producto": "Cannoli-casero-en-freidora-sin-aceite.png",
+        "nombre_producto":"Cannoli Casero",
+        "descripcion_producto":"Cannoli casero de masa frita, relleno de crema americana y chips de chocolate."
+    }
+    ,
+    {
+        "id": 6,
+        "img_producto": "croissant-relleno-de-chocolate-500x500.jpg",
+        "nombre_producto":"Croissant relleno",
+        "descripcion_producto":"Croissant estilo Francés, relleno de cacao puro y endulzado suavemente con stevia."
+    },
+    {
+        "id": 7,
+        "img_producto": "painauchocolat.jpeg",
+        "nombre_producto":"Pain au chocolat",
+        "descripcion_producto":"Panecillo Francés, relleno del más puro chocolate."
+    },
+    {
+        "id": 8,
+        "img_producto": "donas.png",
+        "nombre_producto":"Donas",
+        "descripcion_producto":"Donas caseras hechas en el momento! Probalas en todas las variedades de glasé"
+    }
+]
+
+
+

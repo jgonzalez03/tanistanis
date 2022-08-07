@@ -1,12 +1,12 @@
 
 class Producto {
-    constructor(nombre, descripcion, tipo, precio, estado, stock){ 
+    constructor(nombre, apellido, direccion, telefono, estado, correo){ 
         this.nombre = nombre
-        this.descripcion = descripcion
-        this.tipo = tipo
-        this.precio = precio
+        this.apellido = apellido
+        this.direccion = direccion
+        this.telefono = telefono
         this.estado = estado
-        this.stock = stock
+        this.correo = correo
     }
 }
 
@@ -26,13 +26,13 @@ const divProductos = document.getElementById("divProductos")
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     let datForm = new FormData(e.target) // obtener datos con name de formularios
-    const producto = new Producto(datForm.get("nombre"),datForm.get("descripcion"),datForm.get("tipo"),datForm.get("precio"),datForm.get("estado"),datForm.get("stock"))
+    const producto = new Producto(datForm.get("nombre"),datForm.get("apellido"),datForm.get("direccion"),datForm.get("telefono"),datForm.get("estado"),datForm.get("correo"))
     productos.push(producto)
     localStorage.setItem("productosStorage", JSON.stringify(productos))
     
     Swal.fire({
         icon: 'success',
-        title:`Se agregó el producto con éxito: ${producto.nombre}`,
+        title:`Se agregó el cliente: "${producto.nombre} ${producto.apellido}" con éxito.`,
         showConfirmButton: false,
         timer: 3500,
     })
@@ -50,12 +50,11 @@ botonMostrar.addEventListener("click", () => {
                 <div>
                     <div class="card index__card">
                         <div class="card-body">
-                            <h5 class="card-title">Producto: ${producto.nombre}</h5>
-                            <p class="card-text index__pcards">${producto.descripcion}</p>
-                            <p class="card-text index__pcards">Tipo de producto: ${producto.tipo}</p>
-                            <p class="card-text index__pcards">Cantidad de stock: ${producto.stock}</p>
+                            <h5 class="card-title">Nombre: ${producto.nombre} ${producto.apellido}</h5>
+                            <p class="card-text index__pcards">Direccion del cliente: ${producto.direccion}</p>
+                            <p class="card-text index__pcards">Correo: ${producto.correo}</p>
                             <p class="card-text index__pcards">Estado: ${producto.estado}</p>
-                            <p class="card-text index__pcards">Precio: $${producto.precio}</p>
+                            <p class="card-text index__pcards">Telefono: $${producto.telefono}</p>
                         </div>  
                         <button class="btn btn-danger">Eliminar producto</button>
                     </div>
@@ -75,7 +74,7 @@ botonMostrar.addEventListener("click", () => {
             
             Swal.fire({
                 icon: 'warning',
-                title: `Se eliminó del storage el producto: ${producto.nombre}`,
+                title: `Se eliminó del storage el cliente: ${producto.nombre} ${producto.apellido}`,
                 showConfirmButton: false,
                 timer: 1500,
             })
