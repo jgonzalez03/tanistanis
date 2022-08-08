@@ -72,12 +72,36 @@ botonMostrar.addEventListener("click", () => {
             productos.splice(indice, 1) // eliminar del array
             localStorage.setItem("productosStorage", JSON.stringify(productos))
             
+
+            let timerInterval
             Swal.fire({
-                icon: 'warning',
-                title: `Se eliminó del storage el cliente: ${producto.nombre} ${producto.apellido}`,
-                showConfirmButton: false,
-                timer: 1500,
+            title: 'Se eliminará al cliente de la base de datos',
+            html: 'Procesando datos <b></b> milisegundos.',
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                b.textContent = Swal.getTimerLeft()
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+            }).then((result) => {
+            if (result.dismiss === Swal.DismissReason.timer) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: `Se eliminó del storage el cliente: ${producto.nombre} ${producto.apellido}`,
+                    showConfirmButton: false,
+                    timer: 2500,
+                })
+            }
             })
+
+
+            
         })
 
     })
