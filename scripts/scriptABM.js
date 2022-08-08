@@ -1,5 +1,5 @@
 
-class Producto {
+class Persona {
     constructor(nombre, apellido, direccion, telefono, estado, correo){ 
         this.nombre = nombre
         this.apellido = apellido
@@ -10,29 +10,29 @@ class Producto {
     }
 }
 
-let productos = []
+let personas = [] // se crea el array que contendrá a las personas
 
-if(localStorage.getItem("productosStorage")) {
-    productos = JSON.parse(localStorage.getItem("productosStorage"))
+if(localStorage.getItem("productosStorage")) { // verificación si ya existe en el storage información
+    personas = JSON.parse(localStorage.getItem("productosStorage"))
 } else {
-    localStorage.setItem("productosStorage", JSON.stringify(productos))
+    localStorage.setItem("productosStorage", JSON.stringify(personas))
 }
 
 const form = document.getElementById("idForm")
 const botonMostrar = document.getElementById("botonMostrar")
-const divProductos = document.getElementById("divProductos")
+const divPersonas = document.getElementById("divPersonas")
 
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     let datForm = new FormData(e.target) // obtener datos con name de formularios
-    const producto = new Producto(datForm.get("nombre"),datForm.get("apellido"),datForm.get("direccion"),datForm.get("telefono"),datForm.get("estado"),datForm.get("correo"))
-    productos.push(producto)
-    localStorage.setItem("productosStorage", JSON.stringify(productos))
+    const persona = new Persona(datForm.get("nombre"),datForm.get("apellido"),datForm.get("direccion"),datForm.get("telefono"),datForm.get("estado"),datForm.get("correo"))
+    personas.push(persona)
+    localStorage.setItem("productosStorage", JSON.stringify(personas))
     
     Swal.fire({
         icon: 'success',
-        title:`Se agregó el cliente: "${producto.nombre} ${producto.apellido}" con éxito.`,
+        title:`Se agregó el cliente: "${persona.nombre} ${persona.apellido}" con éxito.`,
         showConfirmButton: false,
         timer: 3500,
     })
@@ -42,21 +42,21 @@ form.addEventListener("submit", (e) => {
 
 botonMostrar.addEventListener("click", () => {
     let productosStorage = JSON.parse(localStorage.getItem("productosStorage"))
-    divProductos.innerHTML = ""
-    productosStorage.forEach((producto, indice) => {
-        divProductos.innerHTML += `
+    divPersonas.innerHTML = ""
+    productosStorage.forEach((persona, indice) => {
+        divPersonas.innerHTML += `
 
-            <div id="producto${indice}">
+            <div id="persona${indice}">
                 <div>
                     <div class="card index__card">
                         <div class="card-body">
-                            <h5 class="card-title">Nombre: ${producto.nombre} ${producto.apellido}</h5>
-                            <p class="card-text index__pcards">Direccion del cliente: ${producto.direccion}</p>
-                            <p class="card-text index__pcards">Correo: ${producto.correo}</p>
-                            <p class="card-text index__pcards">Estado: ${producto.estado}</p>
-                            <p class="card-text index__pcards">Telefono: $${producto.telefono}</p>
+                            <h5 class="card-title">Nombre: ${persona.nombre} ${persona.apellido}</h5>
+                            <p class="card-text index__pcards">Direccion del cliente: ${persona.direccion}</p>
+                            <p class="card-text index__pcards">Correo: ${persona.correo}</p>
+                            <p class="card-text index__pcards">Estado: ${persona.estado}</p>
+                            <p class="card-text index__pcards">Telefono: $${persona.telefono}</p>
                         </div>  
-                        <button class="btn btn-danger">Eliminar producto</button>
+                        <button class="btn btn-danger">Eliminar persona de la base</button>
                     </div>
                     
                 </div>
@@ -65,12 +65,12 @@ botonMostrar.addEventListener("click", () => {
         
     });
     
-    productosStorage.forEach((producto, indice) => {
-        document.getElementById(`producto${indice}`).lastElementChild.addEventListener("click", () => {
-            /* alert(`Se eliminó el producto: ${producto.nombre}`) */
-            document.getElementById(`producto${indice}`).remove() // Eliminar del DOM
-            productos.splice(indice, 1) // eliminar del array
-            localStorage.setItem("productosStorage", JSON.stringify(productos))
+    productosStorage.forEach((persona, indice) => {
+        document.getElementById(`persona${indice}`).lastElementChild.addEventListener("click", () => {
+            /* alert(`Se eliminó el persona: ${persona.nombre}`) */
+            document.getElementById(`persona${indice}`).remove() // Eliminar del DOM
+            personas.splice(indice, 1) // eliminar del array
+            localStorage.setItem("persona", JSON.stringify(personas))
             
 
             let timerInterval
@@ -93,7 +93,7 @@ botonMostrar.addEventListener("click", () => {
             if (result.dismiss === Swal.DismissReason.timer) {
                 Swal.fire({
                     icon: 'warning',
-                    title: `Se eliminó del storage el cliente: ${producto.nombre} ${producto.apellido}`,
+                    title: `Se eliminó del storage el cliente: ${persona.nombre} ${persona.apellido}`,
                     showConfirmButton: false,
                     timer: 2500,
                 })

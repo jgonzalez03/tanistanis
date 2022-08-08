@@ -93,7 +93,7 @@ fetch('../scripts/json/productos.json')
 
 })
 
-setTimeout(() => {
+setTimeout(() => { // Modal consultado si necesita ayuda, en un principio la idea era poner la posibilidad de que el usuario chateara con la web.
     Swal.fire({
         position: 'bottom-end',
         background: '#334756',
